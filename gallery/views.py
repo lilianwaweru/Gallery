@@ -13,8 +13,8 @@ def search_category(request):
         searched_images = Image.search_by_category(search_term)
         message = f"{search_term}"
 
-        return render(request, 'search.html',{"message":message,"images": searched_images})
+        return render(request, 'all-gallery/search.html',{"message":message,"images": searched_images})
 
     else:
         message = "You haven't searched for any category"
-        return render(request, 'search.html',{"message":message})    
+        return render(request, 'all-gallery/search.html',{"message":message})    
