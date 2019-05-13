@@ -1,3 +1,5 @@
+{% load bootstrap3 %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +12,7 @@
   {% endif %}
   {% block styles %}
     {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/basenews.css' %}">
+    <link rel="stylesheet" href="{% static 'css/basegallery.css' %}">
   {% endblock %}  
   
 </head>
@@ -20,8 +22,7 @@
   {% endblock %}
   {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- {% bootstrap_javascript %}
-
-    
+ {% bootstrap_javascript %} 
+ {% endblock %}   
 </body>
 </html>
