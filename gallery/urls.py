@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 urlpatterns=[
     url('^$',views.welcome,name = 'welcome'),
     url(r'^search/', views.search_category, name='search_category'),
-    # url(r'^location/(\d+)',views.display_location,name='displayLocation'),
+    url(r'^location/(\d+)',views.display_location,name='displayLocation'),
 
 ]
 if settings.DEBUG:
