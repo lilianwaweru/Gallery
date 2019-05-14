@@ -5,26 +5,28 @@
 {{block.super}}
 
 <div class="container">
-    <div class="jumbotron jumbotron-fluid" id="jumbo">
+    <div class="jumbotron jumbotron-fluid" id="jumbo" style="background-color: blue">
         <div class="container">
           <h1 class="text-center"><strong>PHOTO GALLERY</strong></h1> 
         </div>
- 
+    </div>
+        <div class="row">
   {% for image in images %}
-  <div class="col-md-4">
+  
+  <div class="col-md-4" style="padding:10px">
         <div class="card mb-4 shadow-sm">
           
           <div class="card-body">
             <!-- <p class="card-text">{{image.name}}.</p> -->
-            <img src="{{image.image.url}}" class="img-responsive" alt="Image" data-toggle="modal" data-target="#{{image.name}}">
+            <img src="{{image.image.url}}" class="img-responsive" style="width:400px;height: 200px" alt="Image" data-toggle="modal" data-target="#{{image.name}}">
             <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-              </div>
+             
              
             </div>
           </div>
         </div>
       </div>
+      
     
  <!-- Modal -->
 <div class="modal fade" id="{{image.name}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -57,7 +59,8 @@
     </div>
   </div>
 </div>
+
       {% endfor %}
-    
+    </div>
     </div>
 {% endblock %}
