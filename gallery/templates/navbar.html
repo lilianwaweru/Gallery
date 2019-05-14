@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<style>
+  .nav a{
+      color: black!important;
+  }
+  .nav a:hover{
+      color: aliceblue!important;
+  }
+</style>
+
 <html lang="en">
 <head>
 
@@ -7,9 +16,9 @@
 </head>
 <body>
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+  <div class="container-fluid" style="background-color:blue">
     <div class="navbar-header">
-      <a class="navbar-brand" href="{% url 'welcome' %}">Gallery</a>
+      <a class="navbar-brand" href="{% url 'welcome' %}"><strong>Gallery</strong></a>
     </div>
     <!-- Adding a search form -->
     <div class="col-sm-4 col-md-4 navbar-right">
